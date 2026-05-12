@@ -63,13 +63,13 @@
 
 ## ⚙️ โครงสร้างซอร์สโค้ด (Project Structure)
 - `main.c` : เมนลูป ควบคุม State machine ของระบบ
-- `rfid/` : ไลบรารีควบคุม MFRC522 (อ่านค่า Register, Anti-collision)
-- `sdcard/` : ไลบรารีจัดการ SD Card และ Bit-bang SPI
-- `fatfs/` : ไลบรารีจัดการระบบไฟล์ FAT32 ของคุณ ChaN (ปิดฟังก์ชันที่ไม่จำเป็นเพื่อประหยัด RAM/Flash)
-- `lcd/` : ไลบรารีควบคุมหน้าจอ LCD แบบ 4-bit
-- `keypad/` : ไลบรารีสแกนปุ่มกด Matrix Keypad
-- `spi/` : ไลบรารี Hardware SPI 
-- `utils/` : ฟังก์ชันหน่วงเวลา (Delay) และควบคุม Servo ด้วย PWM Timer 1
+- [`rfid/`](rfid/README.md) : ไลบรารีควบคุม MFRC522 (อ่านค่า Register, Anti-collision)
+- [`sdcard/`](sdcard/README.md) : ไลบรารีจัดการ SD Card และ Bit-bang SPI
+- [`fatfs/`](fatfs/README.md) : ไลบรารีจัดการระบบไฟล์ FAT32 ของคุณ ChaN (ปิดฟังก์ชันที่ไม่จำเป็นเพื่อประหยัด RAM/Flash)
+- [`lcd/`](lcd/README.md) : ไลบรารีควบคุมหน้าจอ LCD แบบ 4-bit
+- [`keypad/`](keypad/README.md) : ไลบรารีสแกนปุ่มกด Matrix Keypad
+- [`spi/`](spi/README.md) : ไลบรารี Hardware SPI 
+- [`utils/`](utils/README.md) : ฟังก์ชันหน่วงเวลา (Delay) และควบคุม Servo ด้วย PWM Timer 1
 
 ## 🔧 การตั้งค่า Servo (Servo Configuration)
 สามารถปรับแต่งการหมุนของ Servo เพื่อเปิด/ปิดประตูได้ที่ไฟล์ `utils/servo.h`
