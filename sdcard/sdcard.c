@@ -1,3 +1,6 @@
+#ifndef F_CPU
+#define F_CPU 8000000L
+#endif
 #include "sdcard.h"
 #include <util/delay.h>
 
@@ -29,9 +32,9 @@ void sdcard_deselect(void)
 
 void sd_spi_init(void)
 {
-    // PC4 = SD Card MISO (Input, ไม่ใส่ Pull-up)
+    // PC4 = SD Card MISO (Input, Enable Pull-up)
     DDRC &= ~(1 << PC4);
-    PORTC &= ~(1 << PC4);
+    PORTC |= (1 << PC4);
 }
 
 void sd_spi_begin(void)

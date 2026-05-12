@@ -63,15 +63,15 @@ static void antenna_on(void)
 void mfrc522_init(void)
 {
     DDRB |= (1 << PB2);
-    DDRB |= (1 << PB1);
+    DDRC |= (1 << PC5); // Moved RST from PB1 to PC5
     
     // Deselect RFID by default
     PORTB |= (1 << PB2);
 
     // Hard Reset (RST pin LOW then HIGH)
-    PORTB &= ~(1 << PB1);
+    PORTC &= ~(1 << PC5);
     delay_ms(50);
-    PORTB |= (1 << PB1);
+    PORTC |= (1 << PC5);
     delay_ms(50);
 
     spi_init();

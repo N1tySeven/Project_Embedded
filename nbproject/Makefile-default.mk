@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c keypad/keypad.c lcd/lcd.c utils/delay.c rfid/mfrc522.c spi/spi.c sdcard/sdcard.c fatfs/diskio.c fatfs/ff.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c keypad/keypad.c lcd/lcd.c utils/delay.c rfid/mfrc522.c spi/spi.c sdcard/sdcard.c fatfs/diskio.c fatfs/ff.c utils/servo.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/keypad/keypad.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/utils/delay.o ${OBJECTDIR}/rfid/mfrc522.o ${OBJECTDIR}/spi/spi.o ${OBJECTDIR}/sdcard/sdcard.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/fatfs/ff.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/keypad/keypad.o.d ${OBJECTDIR}/lcd/lcd.o.d ${OBJECTDIR}/utils/delay.o.d ${OBJECTDIR}/rfid/mfrc522.o.d ${OBJECTDIR}/spi/spi.o.d ${OBJECTDIR}/sdcard/sdcard.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/fatfs/ff.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/keypad/keypad.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/utils/delay.o ${OBJECTDIR}/rfid/mfrc522.o ${OBJECTDIR}/spi/spi.o ${OBJECTDIR}/sdcard/sdcard.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/utils/servo.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/keypad/keypad.o.d ${OBJECTDIR}/lcd/lcd.o.d ${OBJECTDIR}/utils/delay.o.d ${OBJECTDIR}/rfid/mfrc522.o.d ${OBJECTDIR}/spi/spi.o.d ${OBJECTDIR}/sdcard/sdcard.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/utils/servo.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/keypad/keypad.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/utils/delay.o ${OBJECTDIR}/rfid/mfrc522.o ${OBJECTDIR}/spi/spi.o ${OBJECTDIR}/sdcard/sdcard.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/fatfs/ff.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/keypad/keypad.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/utils/delay.o ${OBJECTDIR}/rfid/mfrc522.o ${OBJECTDIR}/spi/spi.o ${OBJECTDIR}/sdcard/sdcard.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/utils/servo.o
 
 # Source Files
-SOURCEFILES=main.c keypad/keypad.c lcd/lcd.c utils/delay.c rfid/mfrc522.c spi/spi.c sdcard/sdcard.c fatfs/diskio.c fatfs/ff.c
+SOURCEFILES=main.c keypad/keypad.c lcd/lcd.c utils/delay.c rfid/mfrc522.c spi/spi.c sdcard/sdcard.c fatfs/diskio.c fatfs/ff.c utils/servo.c
 
 
 
@@ -166,6 +166,12 @@ ${OBJECTDIR}/fatfs/ff.o: fatfs/ff.c  .generated_files/eba91b2f209f8c1f479b07c64a
 	@${RM} ${OBJECTDIR}/fatfs/ff.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/fatfs/ff.o.d" -MT "${OBJECTDIR}/fatfs/ff.o.d" -MT ${OBJECTDIR}/fatfs/ff.o -o ${OBJECTDIR}/fatfs/ff.o fatfs/ff.c 
 	
+${OBJECTDIR}/utils/servo.o: utils/servo.c  .generated_files/81a9ad2e2236576a54b2b1b57a4755a068d23065.flag .generated_files/20399448a832cbd630475386a660c541583d2068.flag
+	@${MKDIR} "${OBJECTDIR}/utils" 
+	@${RM} ${OBJECTDIR}/utils/servo.o.d 
+	@${RM} ${OBJECTDIR}/utils/servo.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/utils/servo.o.d" -MT "${OBJECTDIR}/utils/servo.o.d" -MT ${OBJECTDIR}/utils/servo.o -o ${OBJECTDIR}/utils/servo.o utils/servo.c 
+	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/f7ba77a01f5e63170ccc9a8c6c96506023e01af.flag .generated_files/20399448a832cbd630475386a660c541583d2068.flag
 	@${MKDIR} "${OBJECTDIR}" 
@@ -220,6 +226,12 @@ ${OBJECTDIR}/fatfs/ff.o: fatfs/ff.c  .generated_files/e3a3001dc47b565ccb4ff18e5c
 	@${RM} ${OBJECTDIR}/fatfs/ff.o.d 
 	@${RM} ${OBJECTDIR}/fatfs/ff.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/fatfs/ff.o.d" -MT "${OBJECTDIR}/fatfs/ff.o.d" -MT ${OBJECTDIR}/fatfs/ff.o -o ${OBJECTDIR}/fatfs/ff.o fatfs/ff.c 
+	
+${OBJECTDIR}/utils/servo.o: utils/servo.c  .generated_files/70842fc16c73d6dd1a13f2ca53b1708cfa50b851.flag .generated_files/20399448a832cbd630475386a660c541583d2068.flag
+	@${MKDIR} "${OBJECTDIR}/utils" 
+	@${RM} ${OBJECTDIR}/utils/servo.o.d 
+	@${RM} ${OBJECTDIR}/utils/servo.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/utils/servo.o.d" -MT "${OBJECTDIR}/utils/servo.o.d" -MT ${OBJECTDIR}/utils/servo.o -o ${OBJECTDIR}/utils/servo.o utils/servo.c 
 	
 endif
 

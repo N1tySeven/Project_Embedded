@@ -1,4 +1,5 @@
-build/default/production/main.o.d build/default/production/main.o: main.c \
+build/default/production/utils/servo.o.d \
+ build/default/production/utils/servo.o: utils/servo.c utils/servo.h \
  c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.45\avr\avr\include\inttypes.h \
@@ -12,11 +13,9 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\fuse.h \
  c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\lock.h \
- c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\interrupt.h \
- c:\program\ files\microchip\xc8\v2.45\avr\avr\include\string.h \
- c:\program\ files\microchip\xc8\v2.45\avr\avr\include\stdio.h lcd/lcd.h \
- keypad/keypad.h utils/delay.h utils/servo.h spi/spi.h sdcard/sdcard.h \
- rfid/mfrc522.h fatfs/ff.h fatfs/ffconf.h fatfs/diskio.h
+ utils/../utils/delay.h
+
+utils/servo.h:
 
 c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\io.h:
 
@@ -44,28 +43,4 @@ c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\fuse.h:
 
 c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\lock.h:
 
-c:\program\ files\microchip\xc8\v2.45\avr\avr\include\avr\interrupt.h:
-
-c:\program\ files\microchip\xc8\v2.45\avr\avr\include\string.h:
-
-c:\program\ files\microchip\xc8\v2.45\avr\avr\include\stdio.h:
-
-lcd/lcd.h:
-
-keypad/keypad.h:
-
-utils/delay.h:
-
-utils/servo.h:
-
-spi/spi.h:
-
-sdcard/sdcard.h:
-
-rfid/mfrc522.h:
-
-fatfs/ff.h:
-
-fatfs/ffconf.h:
-
-fatfs/diskio.h:
+utils/../utils/delay.h:
